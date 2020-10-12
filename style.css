@@ -104,32 +104,8 @@ nav {
 /***************************************** MEDIA Q ********************************/
 /******************** NAV ***************/
 
-/*
-@media screen and (max-width:1250px) {
-    .nav-links {
-        width: 55%;
-    }
-}
-*/
-
-/*
-@media screen and (max-width:1024px) {
 
 
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 70vh;
-        top: 13vh;
-        background: #7CB2C2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform .5s ease-in;
-    }
-*/
 
 
 @media screen and (max-width:1050px) {
@@ -141,21 +117,22 @@ padding: 0px;
 width: 90%;
 
     }
-}
 
+    #splashbillede {
+        object-fit: cover;
 
-
-
-
-/*
-    .nav-active {
-        transform: translateX(0%) !important;
-        opacity: 95%;
-        z-index: 1;
     }
 
+    #citat_tekst {
+    font-size: 1.5rem;
+    }
 }
-*/
+
+
+
+
+
+
 
 
 
