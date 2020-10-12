@@ -149,12 +149,16 @@ nav {
 
 
 
-#section1 {
+#section1, #citat, #quiz, #video, #end {
     background-color: #FAC177;
     padding-top: 1vw;
 
 }
 
+
+#section1 p {
+padding-top: 1.1vw;
+}
 
 #section2 {
        background-color: #FAC177;
@@ -162,7 +166,7 @@ nav {
 }
 
 
-#content {
+#content, #citat_tekst, .content, #myVideo, #video_content {
 
     width: 70vw;
     display: flex;
@@ -171,28 +175,50 @@ nav {
     margin-right: auto;
 }
 
+#billeder {
+  padding-top: 1.1vw;
+}
+
+#billeder img {
+    border-style: solid;
+    border-color: white;
+}
+
+#citat {
+/*border-top: solid; */
+    padding-top: 10vw;
+}
+
+#citat_tekst {
+font-style: oblique;
+    font-size: 2.2rem;
+}
+
+#section3 {
+    padding-top: 10vw;
+}
 
 
+#quiz {
+   padding-top: 10vw;
+}
 
-
-
+#video {
+    padding-top: 10vw;
+}
 
 
 
 /******************************** SØJLEDIAGRAM ********************************/
-h2 {
-  margin-top: 10vh;
-  color: white;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 #barchart {
   margin-top: 5vw;
   max-width: 1000px;
   overflow: visible;
   z-index: 9999;
-  margin-left: 250px;
+  margin-left: 50px;
+    margin-bottom: 10vw;
 }
 
 #chart line {
@@ -202,8 +228,9 @@ h2 {
 
 text {
   fill: white;
-  font-size: .4rem;
-  font-family: sans-serif;
+  font-size: 0.4rem;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .bars {
@@ -220,3 +247,56 @@ text {
 }
 
 
+
+
+
+
+/************************PILE ***********************/
+
+.box {
+    position: absolute;
+    top: 725px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.box span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+    animation: animate 2s infinite;
+    margin: -10px;
+
+
+}
+
+.box span:nth-child(2) {
+    animation-delay: -0.2s;
+
+}
+
+.box span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+
+}
