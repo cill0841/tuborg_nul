@@ -16,7 +16,7 @@
 
             <ul class="nav-links">
                 <li><a href="index.html">Kampagne</a></li>
-                <li><a href="index.html#quiz">Quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="index.html#video">Video</a></li>
                 <li><a href="blog.html">Video portfolio</a></li>
 
@@ -67,14 +67,9 @@
 
  </section>
 
- <section id="quiz">
- <div id="content">
- <h1> Bruger interaktion </h1>
- <p> Tekst ehehhehehhehehhe
- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta eos optio nam voluptatum error, praesentium, deleniti voluptate fuga! In eaque hic natus veritatis sapiente tenetur dicta. Fugiat, aliquid quisquam.         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptatem quae modi similique enim iure excepturi temporibus reiciendis, possimus autem consequuntur laudantium voluptas sit provident. Nemo debitis corporis assumenda animi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae non recusandae commodi sit quas facilis accusamus quia autem. Et illo laborum tempora perferendis ad nesciunt eius cupiditate, fugiat placeat culpa.</p>
- </div>
 
- </section>
+
+
 
 
 <section id="video">
@@ -151,10 +146,12 @@
 
 
 
+<!--
 <section id="end">
 
  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eaque sed perspiciatis culpa facere harum, minus praesentium. Natus eaque, sunt distinctio vitae quos, error odit at nam nulla esse et.</p>
  </section>
+-->
 
  </div>
 
@@ -173,7 +170,46 @@
 
 
 
-<script src="script.js"> </script>
+<script>
+       //script til søjlediagram
+
+    const values = [39, 52, 66, 108, 128];
+    const output = document.querySelector("#output");
+    const total = values.reduce((sum, value) => sum + value);
+    //med metoden "reduce" kan jeg udregne summen af tallene i mit array
+    document.querySelectorAll(".bars line").forEach((bar, i) => {
+      bar.setAttribute("y1", 120 - values[i]);
+      bar.setAttribute("data-value", values[i]);
+      bar.setAttribute("data-procent", values[i] / total * 100);
+      bar.addEventListener("mouseover", e => vis(e)); //vis data i output ved mouseover
+      bar.addEventListener("mouseout", skjul); // skjul data ved mouseout
+    });
+
+
+    //denne function viser <p> output-element og ændrer textContent dynamisk
+    function vis(e) { //e henviser her til mouseover eventet
+      //        output.textContent = Math.round(e.target.dataset.procent) + " %";
+      output.textContent = e.target.dataset.liter + " liter";
+      //        output.textContent = e.target.dataset.year + ": " + e.target.dataset.liter + " liter";
+      output.style.display = "block";
+      window.addEventListener("mousemove", followMouse); // NB: dennne eventlistener er på window
+
+    }
+
+
+
+    //denne function får output-element til at følge musemarkøren, hvis
+    function followMouse(e) { //e henviser her til mousemove eventet
+      output.style.top = (e.clientY - 5) + 'px';
+      output.style.left = (e.clientX) + 'px';
+    }
+
+    //denne function skjuler output-element og fjerner eventListener'en fra window
+    function skjul() {
+      output.style.display = "none";
+      window.removeEventListener("mousemove", followMouse);
+    }
+    </script>
 </body>
 
 </html>
