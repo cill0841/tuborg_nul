@@ -18,14 +18,17 @@ body {
 
 
 
+
 h1 {
  color: #022859;
         font-size: 3rem;
+ font-family: 'Staatliches', cursive;
 }
 
 
 p {
    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -34,6 +37,11 @@ farver:
 gul: #FAC177
 lys blågrønÆ: #97A6A2
 mørkeblå: #022859
+*/
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Staatliches', cursive;
 */
 
 
@@ -63,14 +71,14 @@ nav {
 .nav-links a {
     color: #FFF9F0;
     text-decoration: none;
-/*    font-family: 'Dancing Script', cursive;*/
     padding: 15px;
-    font-size: 1.07rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-/*    border: 3px solid #7CB2C2;*/
     transition: all .6s ease;
     border-radius: 15px;
+   font-family: 'Staatliches', cursive;
+
 }
 
 .nav-links li {
@@ -133,7 +141,7 @@ nav {
 
 
 
-
+/*******************************FORSIDE********************************/
 
 #splashbillede {
     width: 100%;
@@ -143,10 +151,15 @@ nav {
 
 #section1 {
     background-color: #FAC177;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 1vw;
+
 }
 
+
+#section2 {
+       background-color: #FAC177;
+    padding-top: 10vw;
+}
 
 
 #content {
@@ -159,16 +172,14 @@ nav {
 }
 
 
-#deler_img {
-    padding-top: 5%;
-}
 
 
 
 
 
 
-/* SØJLEDIAGRAM */
+
+/******************************** SØJLEDIAGRAM ********************************/
 h2 {
   margin-top: 10vh;
   color: white;
