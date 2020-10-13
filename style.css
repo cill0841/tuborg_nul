@@ -123,14 +123,29 @@ width: 90%;
 
     }
 
-    #citat_tekst {
+    #citat h1 {
     font-size: 1.5rem;
     }
+
+    h1 {
+    font-size: 2.5rem;
+    }
+
+    #video_wrapper {
+    padding-top: 15vw;
+    }
+
+
 }
 
 
 
+@media screen and (max-width:1250px) {
+   .box {
+        display: none;
+    }
 
+}
 
 
 
@@ -376,6 +391,8 @@ table {
   padding-left:25px;
   box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
     padding: 5vw;
+/*    style="width:1000px"*/
+    width: 1000px;
 
 }
 
