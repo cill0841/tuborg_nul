@@ -136,6 +136,8 @@ width: 90%;
     }
 
 
+
+
 }
 
 
@@ -462,4 +464,15 @@ width: 70vw;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+}
+
+#video_content a {
+   color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 7vw;
+}
+
+
+#video_content img {
+padding-bottom: 7vw;
 }
